@@ -1,10 +1,10 @@
 # Claude Code Etymologiae
 
 <p align="center">
-  <img src="assets/cover.jpg" alt="Etymologiae manuscript page — Isidore of Seville, circa 7th century" width="600">
+  <img src="assets/cover.jpg" alt="Etymologiae manuscript page â€” Isidore of Seville, circa 7th century" width="600">
 </p>
 <p align="center">
-  <em>Page from the original <a href="https://en.wikipedia.org/wiki/Etymologiae">Etymologiae</a> by Isidore of Seville (c. 560-636 AD) — the first encyclopedia of the Western world.</em>
+  <em>Page from the original <a href="https://en.wikipedia.org/wiki/Etymologiae">Etymologiae</a> by Isidore of Seville (c. 560-636 AD) â€” the first encyclopedia of the Western world.</em>
 </p>
 
 > *Etymologiae* â€” inspired by Isidore of Seville's encyclopedic work that organized all knowledge of its time. This repository aims to do the same for AI-assisted programming: a living encyclopedia of patterns, practices, and hard-won lessons.
