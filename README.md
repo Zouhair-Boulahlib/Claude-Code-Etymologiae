@@ -49,6 +49,8 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 - [Custom Skills](docs/05-advanced/custom-skills.md) — Build reusable slash commands
 - [Multi-Agent Workflows](docs/05-advanced/multi-agent.md) — Parallelize work across agents
 - [CI/CD Integration](docs/05-advanced/ci-cd.md) — AI in your pipeline
+- [Token Optimization](docs/05-advanced/token-optimization.md) — Minimize cost and maximize context with Repomix, tiktoken, and more
+- [YOLO Mode](docs/05-advanced/yolo-mode.md) — When to skip permissions and when absolutely not to
 
 ### VI. Team Practices
 - [Team Conventions](docs/06-team/conventions.md) — Shared standards for AI-assisted teams
@@ -61,6 +63,21 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 - [Debugging AI Output](docs/07-anti-patterns/debugging-ai.md) — When the suggestions are wrong
 
 ---
+
+### VIII. Coming Soon
+
+> This is a living project. New guides are actively being written. Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+- **AI-Assisted Database Work** -- Migrations, query optimization, schema design with AI guardrails
+- **Monorepo Strategies** -- Managing AI context across multiple packages
+- **Language-Specific Guides** -- TypeScript, Python, Java/Spring, Go, Rust patterns
+- **IDE Integration Deep Dives** -- VS Code, JetBrains, Neovim workflows
+- **Cost Optimization Playbook** -- Budgeting, tracking, and reducing API costs for teams
+- **AI Pair Programming Protocols** -- Structured approaches for live coding sessions
+- **Compliance & Audit Trails** -- Using AI in regulated industries (finance, healthcare)
+- **Open Source Contribution Workflows** -- Using AI to contribute to unfamiliar projects
+- **Performance Profiling with AI** -- Identifying bottlenecks, optimizing hot paths
+- **Incident Response with AI** -- Debugging production issues under pressure
 
 ## Philosophy
 
