@@ -432,6 +432,203 @@ Unlike `/compact` (which preserves key info), `/clear` is a hard reset. Your CLA
 
 ---
 
+## Advanced: Skills for Token Optimization
+
+Custom skills (slash commands) can enforce token-efficient patterns automatically.
+
+### /terse -- Force Minimal Output
+
+Create `.claude/skills/terse.md`:
+
+```markdown
+---
+name: terse
+description: Switch to minimal output mode
+---
+
+From now on in this conversation:
+- Show only changed lines, not full files
+- No explanations unless the change is non-obvious
+- No summaries after completing a task
+- Use inline comments only for complex logic
+- Omit import statements if they are obvious
+```
+
+Usage: type `/terse` at the start of any session. Saves 40-60% on response tokens for the rest of the conversation.
+
+### /focused-read -- Read Only What Matters
+
+Create `.claude/skills/focused-read.md`:
+
+```markdown
+---
+name: focused-read
+description: Read a file focusing on a specific function or section
+---
+
+Read the file provided, but ONLY output:
+1. The specific function, class, or section mentioned
+2. Its direct dependencies (imports it uses)
+3. Nothing else -- no file overview, no other functions
+
+If no specific target is mentioned, output only the public API (exported functions/classes) with their signatures, not implementations.
+```
+
+Usage: `/focused-read src/services/auth.ts verifyToken` -- reads the file but only outputs the `verifyToken` function. Typical savings: 70-80% per file read.
+
+### /slim-diff -- Compact Diff Output
+
+Create `.claude/skills/slim-diff.md`:
+
+```markdown
+---
+name: slim-diff
+description: Generate changes as minimal unified diffs
+---
+
+When making code changes, output ONLY:
+- The file path
+- A unified diff with 1 line of context (not 3)
+- No explanation before or after
+
+Do not show unchanged files. Do not summarize.
+```
+
+---
+
+## Advanced: Hooks for Token Optimization
+
+Hooks execute shell commands on specific events. Several hook patterns reduce token consumption.
+
+### Block Accidental Large File Reads
+
+```json
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "command": "bash -c \"size=$(wc -c < \"$CLAUDE_FILE_PATH\" 2>/dev/null || echo 0); if [ $size -gt 50000 ]; then echo 'BLOCKED: File is too large. Use Grep to find the relevant section first.' >&2; exit 2; fi\""
+      }
+    ]
+  }
+}
+```
+
+Prevents AI from reading files over 50KB in a single call. Exit code 2 blocks the tool call. Forces targeted reads instead of consuming 10,000+ tokens on minified bundles or generated files.
+
+### Token Usage Audit Logger
+
+```json
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": ".*",
+        "command": "bash -c \"echo \"$(date +%H:%M:%S) $CLAUDE_TOOL_NAME $CLAUDE_FILE_PATH\" >> /tmp/claude-token-audit.log\""
+      }
+    ]
+  }
+}
+```
+
+Review after a session: "Why did it read 45 files when I only changed 3?" Awareness drives better prompting.
+
+### Auto-Compact Notification
+
+```json
+{
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "context_window",
+        "command": "bash -c \"echo 'Context pressure detected. Consider /compact or a fresh conversation.' >&2\""
+      }
+    ]
+  }
+}
+```
+
+---
+
+## Advanced: CLAUDE.md Token Directives
+
+Your CLAUDE.md is loaded every conversation. Token-aware directives here compound across every session.
+
+### Response Budget
+
+```markdown
+## Response Style
+- Maximum 20 lines per explanation
+- Show diffs not full files
+- No trailing summaries
+- Only explain non-obvious changes
+- Skip import statements in examples unless unusual
+```
+
+### Read Strategy
+
+```markdown
+## File Reading Rules
+- Always Grep to locate code before using Read
+- Use Read with offset/limit for files over 200 lines
+- Never read node_modules, dist, build, coverage
+- For test files, read only the failing test, not the entire suite
+```
+
+### Agent Strategy
+
+```markdown
+## Agent Usage
+- Use Explore agent for codebase structure questions
+- Use Grep/Glob for specific file or function lookups
+- Never spawn an agent for tasks requiring fewer than 3 file reads
+```
+
+---
+
+## Advanced: Conversation Architecture Patterns
+
+### The Checkpoint Pattern
+
+Commit after each step, start fresh:
+
+```
+Conversation 1: "Implement User model and migration" -> commit
+Conversation 2: "Implement UserService (see latest commit)" -> commit
+Conversation 3: "Add REST endpoints for users" -> commit
+```
+
+Each conversation: just CLAUDE.md + current task. No accumulated noise.
+
+Token savings: 60-80% vs one long conversation.
+
+### The Scout-Then-Build Pattern
+
+```
+Conversation 1 (scout): "How is auth implemented? Which files? What middleware?"
+[take notes on the answer]
+
+Conversation 2 (build): "Auth uses JWT in src/middleware/auth.ts with
+verification in src/services/tokenService.ts. Add refresh token rotation."
+```
+
+Scout does expensive exploration. Build gets pre-digested summary.
+
+Token savings: 50% on the build conversation.
+
+### The Narrowing Funnel
+
+```
+Conversation 1: "Overview of payment processing architecture"
+Conversation 2: "Explain retry logic in src/payments/webhookHandler.ts"
+Conversation 3: "Fix race condition in webhookHandler.ts line 89"
+```
+
+Each conversation is cheaper because prompts get more specific.
+
+---
+
 ## Summary: Token Optimization Hierarchy
 
 From highest to lowest impact:
@@ -439,14 +636,19 @@ From highest to lowest impact:
 | Technique | Typical Savings | Effort |
 |-----------|----------------|--------|
 | .claudeignore / file filtering | 90%+ of noise | 2 minutes |
-| Precise file references in prompts | 80-95% per read | Zero (just be specific) |
-| Repomix for bulk context sharing | 95%+ vs raw repo | 5 minutes setup |
-| Subagents for research tasks | Isolates 80%+ of search | Zero (automatic) |
-| CLAUDE.md for persistent context | 200+ tokens/conversation | 15 minutes |
-| Comment stripping (Repomix flag) | 30-50% per file | Zero (one flag) |
-| /compact for long sessions | Recovers 30-50% context | Zero (one command) |
-| Terse response calibration | 40-60% on responses | One prompt |
-| Token counting tools | Awareness, not direct saving | 5 minutes |
+| Precise file references in prompts | 80-95% per read | Zero |
+| Repomix for bulk context sharing | 95%+ vs raw repo | 5 min setup |
+| Checkpoint pattern (fresh conversations) | 60-80% vs long sessions | Zero |
+| Subagents for research tasks | Isolates 80%+ of search | Zero |
+| CLAUDE.md token directives | Compounds across all sessions | 15 minutes |
+| Custom /terse skill | 40-60% on responses | 5 minutes |
+| Hook: block large file reads | Prevents 10K+ token waste | 10 minutes |
+| Scout-then-build pattern | 50% on build conversations | Zero |
+| /focused-read skill | 70-80% per file read | 5 minutes |
+| Comment stripping (Repomix flag) | 30-50% per file | Zero |
+| /compact for long sessions | Recovers 30-50% context | Zero |
+| Token audit logger hook | Awareness for optimization | 5 minutes |
+| Token counting tools (tiktoken) | Awareness | 5 minutes |
 
 The single best optimization: **be specific about what you want and where it is.** Everything else is amplification.
 
