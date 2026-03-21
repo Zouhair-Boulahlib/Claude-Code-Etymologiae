@@ -64,20 +64,33 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 
 ---
 
-### VIII. Coming Soon
+### VIII. Practical Guides
+- [AI-Assisted Database Work](docs/08-guides/database-work.md) -- Migrations, query optimization, schema design with guardrails
+- [Monorepo Strategies](docs/08-guides/monorepo-strategies.md) -- Managing AI context across multiple packages
+- [IDE Integration](docs/08-guides/ide-integration.md) -- VS Code, JetBrains, Neovim workflows
+- [Cost Optimization](docs/08-guides/cost-optimization.md) -- Budgeting, tracking, and reducing API costs
+- [AI Pair Programming](docs/08-guides/pair-programming.md) -- Structured approaches for live coding sessions
+- [Incident Response](docs/08-guides/incident-response.md) -- Debugging production issues under pressure
+- [Performance Profiling](docs/08-guides/performance-profiling.md) -- Identifying bottlenecks with AI assistance
+- [Open Source Contributions](docs/08-guides/open-source-contributions.md) -- Contributing to unfamiliar projects
+- [Compliance & Audit Trails](docs/08-guides/compliance-audit.md) -- AI in regulated industries
+
+### IX. Language & Framework Guides
+- [TypeScript](docs/09-languages/typescript.md) -- Types as AI guardrails, React/Node patterns
+- [Python](docs/09-languages/python.md) -- FastAPI, Django, pytest, data science workflows
+- [Java/Spring Boot](docs/09-languages/java-spring.md) -- Hexagonal architecture, JPA, Spring Security
+- [Go](docs/09-languages/go.md) -- Error handling, interfaces, table-driven tests
+
+### X. Coming Soon
 
 > This is a living project. New guides are actively being written. Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-- **AI-Assisted Database Work** -- Migrations, query optimization, schema design with AI guardrails
-- **Monorepo Strategies** -- Managing AI context across multiple packages
-- **Language-Specific Guides** -- TypeScript, Python, Java/Spring, Go, Rust patterns
-- **IDE Integration Deep Dives** -- VS Code, JetBrains, Neovim workflows
-- **Cost Optimization Playbook** -- Budgeting, tracking, and reducing API costs for teams
-- **AI Pair Programming Protocols** -- Structured approaches for live coding sessions
-- **Compliance & Audit Trails** -- Using AI in regulated industries (finance, healthcare)
-- **Open Source Contribution Workflows** -- Using AI to contribute to unfamiliar projects
-- **Performance Profiling with AI** -- Identifying bottlenecks, optimizing hot paths
-- **Incident Response with AI** -- Debugging production issues under pressure
+- **Rust Patterns** -- Ownership, lifetimes, and how AI handles the borrow checker
+- **React Native / Mobile** -- Cross-platform patterns with AI assistance
+- **DevOps & Infrastructure** -- Terraform, Docker, Kubernetes with AI
+- **API Design with AI** -- REST, GraphQL, gRPC contract-first workflows
+- **Migration Playbooks** -- Framework upgrades, language migrations, database switches
+- **Accessibility with AI** -- WCAG compliance, ARIA labels, screen reader testing
 
 ## Philosophy
 
