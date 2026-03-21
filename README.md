@@ -74,6 +74,7 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 - [Performance Profiling](docs/08-guides/performance-profiling.md) -- Identifying bottlenecks with AI assistance
 - [Open Source Contributions](docs/08-guides/open-source-contributions.md) -- Contributing to unfamiliar projects
 - [Compliance & Audit Trails](docs/08-guides/compliance-audit.md) -- AI in regulated industries
+- [QA Browser Testing](docs/08-guides/qa-browser-testing.md) -- Claude in Chrome for QA teams, JS over clicks, UI vs DB validation
 
 ### IX. Language & Framework Guides
 - [TypeScript](docs/09-languages/typescript.md) -- Types as AI guardrails, React/Node patterns
