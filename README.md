@@ -88,14 +88,16 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 - [Prompt Frameworks](docs/10-frameworks/prompt-frameworks.md) -- 4D, RISEN, CO-STAR, RACE, and more structured approaches to prompting
 - [Agent Loop Patterns](docs/10-frameworks/agent-loops.md) -- RALPH, ReAct, OODA, and other patterns for agentic workflows
 
-### XI. Coming Soon
+### XI. API Design
+- [API Design with AI](docs/11-api-design/api-design.md) -- Contract-first REST, GraphQL, and gRPC workflows
+
+### XII. Coming Soon
 
 > This is a living project. New guides are actively being written. Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 - **Rust Patterns** -- Ownership, lifetimes, and how AI handles the borrow checker
 - **React Native / Mobile** -- Cross-platform patterns with AI assistance
 - **DevOps & Infrastructure** -- Terraform, Docker, Kubernetes with AI
-- **API Design with AI** -- REST, GraphQL, gRPC contract-first workflows
 - **Migration Playbooks** -- Framework upgrades, language migrations, database switches
 - **Accessibility with AI** -- WCAG compliance, ARIA labels, screen reader testing
 
