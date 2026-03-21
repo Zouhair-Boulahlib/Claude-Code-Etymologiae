@@ -160,3 +160,4 @@ Your CLAUDE.md should grow organically from real friction, not from trying to an
 
 - [Effective Prompting](../03-prompts/effective-prompting.md) — Complement your CLAUDE.md with good prompts
 - [Team Conventions](../06-team/conventions.md) — Standardize CLAUDE.md across your team
+- [Project Setup](../04-architecture/project-setup.md) — Structure your project to complement your CLAUDE.md

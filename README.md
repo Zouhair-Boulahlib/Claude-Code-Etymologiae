@@ -84,7 +84,11 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 - [Java/Spring Boot](docs/09-languages/java-spring.md) -- Hexagonal architecture, JPA, Spring Security
 - [Go](docs/09-languages/go.md) -- Error handling, interfaces, table-driven tests
 
-### X. Coming Soon
+### X. Frameworks & Patterns
+- [Prompt Frameworks](docs/10-frameworks/prompt-frameworks.md) -- 4D, RISEN, CO-STAR, RACE, and more structured approaches to prompting
+- [Agent Loop Patterns](docs/10-frameworks/agent-loops.md) -- RALPH, ReAct, OODA, and other patterns for agentic workflows
+
+### XI. Coming Soon
 
 > This is a living project. New guides are actively being written. Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
 

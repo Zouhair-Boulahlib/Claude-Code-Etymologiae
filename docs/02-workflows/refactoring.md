@@ -249,3 +249,4 @@ For these, use the AI to understand the code, but make the structural decisions 
 - [Writing Code](writing-code.md) -- Generating new code with AI assistance
 - [Code Review](code-review.md) -- Reviewing refactored code before shipping
 - [Debugging](debugging.md) -- When refactoring introduces unexpected behavior
+- [Testing Strategies](../04-architecture/testing.md) -- Tests that make refactoring safe

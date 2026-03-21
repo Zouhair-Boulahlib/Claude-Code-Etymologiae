@@ -310,3 +310,8 @@ If you close a session and start a new one to continue the same task, you lose a
 - [ ] Verify CLAUDE.md has not grown beyond what is necessary
 - [ ] Confirm team is using Sonnet for routine tasks
 - [ ] Log any runaway cost incidents and root causes
+
+## Next Steps
+
+- [Token Optimization](../05-advanced/token-optimization.md) -- Deep dive into token-level efficiency
+- [Context Management](../03-prompts/context-management.md) -- Manage context to reduce unnecessary token usage

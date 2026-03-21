@@ -310,3 +310,4 @@ What am I missing?"
 - [Effective Prompting](../03-prompts/effective-prompting.md) -- Foundational techniques for clear communication with AI
 - [Writing Code](../02-workflows/writing-code.md) -- Solo coding workflows that complement pairing
 - [Code Review](../02-workflows/code-review.md) -- Formalizing the review process after a pairing session
+- [Multi-Step Tasks](../03-prompts/multi-step-tasks.md) -- Structure pairing sessions around clear phases

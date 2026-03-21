@@ -93,3 +93,5 @@ The danger is the opposite: using AI as a crutch to avoid thinking. If you find 
 
 - [The CLAUDE.md File](claude-md.md) — Configure your project for better AI collaboration
 - [Effective Prompting](../03-prompts/effective-prompting.md) — Put these mental models into practice
+- [Context Management](../03-prompts/context-management.md) — Master the context window discussed above
+- [Common Mistakes](../07-anti-patterns/common-mistakes.md) — Pitfalls to avoid when applying these models

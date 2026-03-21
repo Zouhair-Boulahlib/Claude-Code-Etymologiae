@@ -346,3 +346,8 @@ Keep this in your team's runbook:
 - [ ] Send status updates to stakeholders throughout
 
 The AI is your fastest reader, your calmest analyst, and your most patient writer at 2 AM. Let it do those jobs. Keep the decision-making for yourself.
+
+## Next Steps
+
+- [Debugging](../02-workflows/debugging.md) -- Foundational debugging skills for incident investigation
+- [Security Considerations](../06-team/security.md) -- Security incident response specifics

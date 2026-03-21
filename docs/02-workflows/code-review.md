@@ -274,3 +274,4 @@ Use AI review to handle the tedious, repeatable checks. Save human review bandwi
 - [Refactoring](refactoring.md) -- Restructuring code after review identifies problems
 - [Git Workflows](git-workflows.md) -- Managing commits and PRs around the review cycle
 - [Common Mistakes](../07-anti-patterns/common-mistakes.md) -- Anti-patterns that reviewers should catch
+- [Security Considerations](../06-team/security.md) -- Security-focused review checklist

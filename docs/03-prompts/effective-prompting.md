@@ -157,3 +157,4 @@ This is faster and more accurate than re-prompting from scratch.
 - [Context Management](context-management.md) — Work within and around context limits
 - [Multi-Step Tasks](multi-step-tasks.md) — Break complex work into manageable pieces
 - [Prompt Patterns](prompt-patterns.md) — Reusable templates for common scenarios
+- [Over-Engineering Traps](../07-anti-patterns/over-engineering.md) — When detailed prompts lead to over-built solutions

@@ -248,3 +248,5 @@ Then: "Now implement calculateTotal to make those tests pass."
 - [Debugging](debugging.md) -- When the code you wrote doesn't work
 - [Code Review](code-review.md) -- Review AI-generated code systematically
 - [Refactoring](refactoring.md) -- Improve code structure without changing behavior
+- [Over-Engineering Traps](../07-anti-patterns/over-engineering.md) -- When AI makes generated code too complex
+- [Common Mistakes](../07-anti-patterns/common-mistakes.md) -- Pitfalls to watch for in AI-generated code

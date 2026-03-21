@@ -345,3 +345,8 @@ When Claude Code behaves differently in CI than locally:
 
 CI integration makes Claude Code a team-wide tool rather than an individual one.
 Start with automated PR reviews -- low risk, high value -- and expand from there.
+
+## Next Steps
+
+- [Hooks & Automation](hooks.md) -- Related automation patterns for local development
+- [Custom Skills](custom-skills.md) -- Build reusable workflows that complement CI pipelines

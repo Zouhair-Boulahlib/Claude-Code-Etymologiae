@@ -197,3 +197,4 @@ None of these are AI-specific. They're good engineering practices that happen to
 - [Testing Strategies](testing.md) -- Write and maintain tests with AI assistance
 - [Documentation](documentation.md) -- Keep docs alive with AI help
 - [The CLAUDE.md File](../01-foundations/claude-md.md) -- Deep dive into project configuration
+- [Team Conventions](../06-team/conventions.md) -- Standardize project setup across your team

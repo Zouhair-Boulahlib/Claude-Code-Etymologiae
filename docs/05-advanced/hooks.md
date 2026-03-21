@@ -353,3 +353,4 @@ Hooks are the "always on" automation layer. They do not depend on Claude remembe
 - [Custom Skills](custom-skills.md) -- Build reusable slash commands for complex workflows
 - [MCP Servers](mcp-servers.md) -- Extend Claude Code with external tool integrations
 - [Token Optimization](token-optimization.md) -- Keep hook output concise to save context
+- [CI/CD Integration](ci-cd.md) -- Automation patterns for your pipeline

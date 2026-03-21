@@ -271,3 +271,4 @@ In these cases, the best pattern is: you gather the data, paste the relevant out
 - [Reading Code](reading-code.md) -- Understand code before trying to fix it
 - [Writing Code](writing-code.md) -- Write the fix once you understand the bug
 - [Common Mistakes](../07-anti-patterns/common-mistakes.md) -- Anti-patterns that make debugging harder
+- [Multi-Step Tasks](../03-prompts/multi-step-tasks.md) -- Decompose complex bugs into manageable investigation steps
