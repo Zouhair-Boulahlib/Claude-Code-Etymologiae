@@ -41,7 +41,8 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 ### IV. Architecture & Design
 - [Project Setup](docs/04-architecture/project-setup.md) — Structure projects for AI-friendly development
 - [Testing Strategies](docs/04-architecture/testing.md) — Write tests that AI can help maintain
-- [Documentation](docs/04-architecture/documentation.md) — Keep docs alive with AI assistance
+- [Documentation](docs/04-architecture/documentation.md)
+- [Scaling Build Processes](docs/04-architecture/scaling-builds.md) -- From solo project to team-scale architecture — Keep docs alive with AI assistance
 
 ### V. Advanced Patterns
 - [Hooks & Automation](docs/05-advanced/hooks.md) — Automate repetitive workflows
@@ -60,7 +61,8 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 ### VII. Anti-Patterns
 - [Common Mistakes](docs/07-anti-patterns/common-mistakes.md) — What NOT to do
 - [Over-Engineering Traps](docs/07-anti-patterns/over-engineering.md) — When AI makes things worse
-- [Debugging AI Output](docs/07-anti-patterns/debugging-ai.md) — When the suggestions are wrong
+- [Debugging AI Output](docs/07-anti-patterns/debugging-ai.md)
+- [Scaling Mistakes](docs/07-anti-patterns/scaling-mistakes.md) -- Anti-patterns that get worse with team growth — When the suggestions are wrong
 
 ---
 
