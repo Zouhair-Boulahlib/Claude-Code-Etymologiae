@@ -340,3 +340,8 @@ Security with AI is not fundamentally different from security without it. The
 difference is volume and speed -- AI generates more code faster, which means
 more surface area to review. The answer is not to slow down. It is to build
 review processes that scale with the output.
+
+## Next Steps
+
+- [Starter Kit: Security Command](../../starter-kit/commands/security-check.md) -- Ready-to-use security audit command
+- [Code Review](../02-workflows/code-review.md) -- Review process for catching security issues

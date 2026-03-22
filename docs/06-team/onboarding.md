@@ -264,3 +264,4 @@ The teams that succeed treat AI tools the way they treat any other engineering t
 - [Effective Prompting](../03-prompts/effective-prompting.md) -- The prompting guide to share with new users
 - [The CLAUDE.md File](../01-foundations/claude-md.md) -- Deep dive into project configuration
 - [Team Conventions](../06-team/conventions.md) -- Shared standards new developers should learn
+- [Starter Kit](../../starter-kit/) -- Quick-start configs for new team members

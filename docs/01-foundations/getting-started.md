@@ -111,3 +111,4 @@ These small wins teach you how the tool thinks and where it needs guidance.
 - [Mental Models](mental-models.md) — How to think about AI-assisted development
 - [The CLAUDE.md File](claude-md.md) — Deep dive into project configuration
 - [Effective Prompting](../03-prompts/effective-prompting.md) — Write prompts that get results
+- [Starter Kit](../../starter-kit/) — Ready-to-use templates, hooks, commands, and agents

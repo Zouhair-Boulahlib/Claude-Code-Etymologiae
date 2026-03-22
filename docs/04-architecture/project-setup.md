@@ -198,3 +198,4 @@ None of these are AI-specific. They're good engineering practices that happen to
 - [Documentation](documentation.md) -- Keep docs alive with AI help
 - [The CLAUDE.md File](../01-foundations/claude-md.md) -- Deep dive into project configuration
 - [Team Conventions](../06-team/conventions.md) -- Standardize project setup across your team
+- [Starter Kit: Templates](../../starter-kit/templates/) -- CLAUDE.md templates for different project types

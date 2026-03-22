@@ -361,3 +361,4 @@ These three mechanisms overlap. Here is when to use each:
 - [Hooks & Automation](hooks.md) -- Add automatic behavior that complements your skills
 - [MCP Servers](mcp-servers.md) -- Give your skills access to databases, APIs, and external tools
 - [Effective Prompting](../03-prompts/effective-prompting.md) -- The same principles that make good prompts make good skills
+- [Starter Kit: Commands](../../starter-kit/commands/) -- Ready-to-use slash commands

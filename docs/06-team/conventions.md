@@ -267,3 +267,8 @@ Track metrics, but do not obsess over them.
 The goal is not to maximize AI usage. It is to use AI where it genuinely helps
 and stay out of the way where it does not. Conventions make that possible at
 team scale.
+
+## Next Steps
+
+- [Starter Kit](../../starter-kit/) -- Ready-to-use configurations to standardize across teams
+- [The CLAUDE.md File](../01-foundations/claude-md.md) -- Deep dive into project configuration

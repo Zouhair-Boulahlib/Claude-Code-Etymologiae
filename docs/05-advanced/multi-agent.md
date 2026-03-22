@@ -215,3 +215,7 @@ well-scoped agents are more useful than five overlapping ones.
 Multi-agent workflows are a force multiplier, but only when the work genuinely
 decomposes into parallel tracks. Use them to scale your investigation and
 implementation capacity, not as a substitute for clear thinking about the problem.
+
+## Next Steps
+
+- [Starter Kit: Agents](../../starter-kit/agents/) -- Ready-to-use agent definitions
