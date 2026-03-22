@@ -91,6 +91,9 @@ Whether you're a solo dev shipping side projects or part of a team managing a la
 ### XI. API Design
 - [API Design with AI](docs/11-api-design/api-design.md) -- Contract-first REST, GraphQL, and gRPC workflows
 
+### Starter Kit
+- [Starter Kit](starter-kit/) -- Ready-to-use CLAUDE.md templates, hooks, slash commands, and agents
+
 ### XII. Coming Soon
 
 > This is a living project. New guides are actively being written. Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
